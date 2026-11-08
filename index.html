@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <h2>Kalkulator</h2>
+
+    <p>NIM: 255150707111010</p>
+    <p>Nama: Muhammad Fiqo Kholasul Fuad</p>
+
+    <input type="number" id="angka1" placeholder="Angka pertama">
+    <input type="number" id="angka2" placeholder="Angka kedua">
+
+    <br><br>
+
+    <button id="tambah">+</button>
+    <button id="kurang">-</button>
+    <button id="kali">*</button>
+
+    <p id="hasil">Hasil: </p>
+
+    <script>
+        $(document).ready(function() {
+
+            $("#tambah").click(function() {
+                let a = parseFloat($("#angka1").val());
+                let b = parseFloat($("#angka2").val());
+
+                $("#hasil").text("Hasil: " + (a + b));
+            });
+
+            $("#kurang").click(function() {
+                let a = parseFloat($("#angka1").val());
+                let b = parseFloat($("#angka2").val());
+
+                $("#hasil").text("Hasil: " + (a - b));
+            });
+
+            $("#kali").click(function() {
+                let a = parseFloat($("#angka1").val());
+                let b = parseFloat($("#angka2").val());
+
+                $("#hasil").text("Hasil: " + (a * b));
+            });
+
+        });
+    </script>
+
+</body>
+</html>
